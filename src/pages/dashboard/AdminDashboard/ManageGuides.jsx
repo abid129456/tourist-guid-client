@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Swal from "sweetalert2";
-
 const ManageGuides = () => {
   const { data: guides = [], refetch, isLoading } = useQuery({
     queryKey: ["guides"],
@@ -10,7 +9,6 @@ const ManageGuides = () => {
       return res.data;
     },
   });
-
   const handleApprove = async (id) => {
     try {
       const res = await axios.patch(`http://localhost:5000/guides/approve/${id}`);
@@ -22,7 +20,6 @@ const ManageGuides = () => {
       Swal.fire("Error", "Approval failed", "error");
     }
   };
-
   if (isLoading) return <p className="text-center mt-10">Loading...</p>;
 
   const pendingGuides = guides.filter((guide) => guide.status !== "approved");
@@ -68,5 +65,4 @@ const ManageGuides = () => {
     </div>
   );
 };
-
 export default ManageGuides;

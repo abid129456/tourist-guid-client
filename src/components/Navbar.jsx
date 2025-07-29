@@ -1,24 +1,3 @@
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-white shadow-md px-6 py-3 flex justify-between items-center">
-//       <Link to="/" className="text-2xl font-bold text-green-600">
-//         🧭 Tourist Guide
-//       </Link>
-
-//       <div className="space-x-4">
-//         <Link to="/" className="hover:text-green-500 font-medium">Home</Link>
-//         <Link to="/login" className="hover:text-green-500 font-medium">Login</Link>
-//         <Link to="/register" className="hover:text-green-500 font-medium">Register</Link>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
 import { useContext, useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
@@ -40,7 +19,6 @@ const Navbar = () => {
     }
   };
 
-  // Close dropdown on outside click
   useEffect(() => {
     const closeDropdown = () => setDropdownOpen(false);
     window.addEventListener("click", closeDropdown);

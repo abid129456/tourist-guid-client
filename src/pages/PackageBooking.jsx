@@ -14,7 +14,6 @@ const PackageBooking = () => {
       status: "pending",
       date: new Date(),
     };
-
     try {
       const res = await axios.post("http://localhost:5000/bookings", bookingData);
       if (res.data.insertedId) {
@@ -25,7 +24,6 @@ const PackageBooking = () => {
       toast.error("Booking failed!");
     }
   };
-
   return (
     <div className="max-w-xl mx-auto p-6 bg-white shadow rounded mt-10">
       <h2 className="text-2xl font-bold mb-4">Book Your Tour Package</h2>
@@ -61,5 +59,4 @@ const PackageBooking = () => {
     </div>
   );
 };
-
 export default PackageBooking;

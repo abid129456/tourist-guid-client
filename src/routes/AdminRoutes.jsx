@@ -1,5 +1,3 @@
-// client/src/routes/AdminRoutes.jsx
-
 import ManageGuides from "../dashboard/AdminDashboard/ManageGuides";
 import RoleBasedRoute from "./RoleBasedRoute";
 
@@ -12,7 +10,7 @@ const AdminRoutes = [
       </RoleBasedRoute>
     ),
   },
-  // অন্য Admin routes এখানে যুক্ত করতে পারো
+
 ];
 
 export default AdminRoutes;

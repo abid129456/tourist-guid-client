@@ -1,21 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 const fetchRandomTourGuides = async () => {
   const { data } = await axios.get(
     `${import.meta.env.VITE_API_URL}/tour-guides/random?limit=6`
   );
   return data;
 };
-
 const TourGuidesSection = () => {
   const navigate = useNavigate();
   const { data, isLoading, error } = useQuery(["randomTourGuides"], fetchRandomTourGuides);
 
   if (isLoading) return <p>Loading tour guides...</p>;
   if (error) return <p>Error loading tour guides</p>;
-
   return (
     <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
       {data.map((guide) => (

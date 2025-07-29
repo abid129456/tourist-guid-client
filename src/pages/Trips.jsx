@@ -6,9 +6,8 @@ const Trips = () => {
         Browse through our amazing tour packages to explore the best destinations in Bangladesh.
       </p>
 
-      {/* ভবিষ্যতে এখানে ট্যুর প্যাকেজ লিস্ট দেখানো হবে */}
       <div className="grid md:grid-cols-3 gap-6">
-        {/* শুধু placeholder */}
+
         <div className="bg-white p-4 rounded shadow">
           <h3 className="text-xl font-semibold mb-2">Cox's Bazar Beach Tour</h3>
           <p className="text-gray-600">Enjoy the longest beach in the world with luxury hotels and seafood!</p>

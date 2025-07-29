@@ -69,7 +69,6 @@ const ManageGuides = () => {
                   >
                     Delete
                   </button>
-                  {/* Edit button - next step */}
                 </td>
               </tr>
             ))}

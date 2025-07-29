@@ -1,70 +1,3 @@
-// import { useForm } from "react-hook-form";
-// import { useContext } from "react";
-// import { AuthContext } from "../contexts/AuthContext";
-// import { useNavigate } from "react-router-dom";
-// import { toast } from "react-hot-toast";
-
-// const Register = () => {
-//   const { register: createUser, updateUser } = useContext(AuthContext);
-//   const { register, handleSubmit } = useForm();
-//   const navigate = useNavigate();
-
-//   const onSubmit = async (data) => {
-//     try {
-//       await createUser(data.email, data.password);
-//       await updateUser({
-//         displayName: data.name,
-//         photoURL: data.image,
-//       });
-//       toast.success("Registration Successful!");
-//       navigate("/");
-//     } catch (err) {
-//       toast.error("Registration failed");
-//     }
-//   };
-
-//   return (
-//     <div className="max-w-md mx-auto my-10 p-6 border shadow rounded">
-//       <h2 className="text-2xl font-bold mb-4">Register</h2>
-//       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-//         <input
-//           type="text"
-//           placeholder="Full Name"
-//           {...register("name", { required: true })}
-//           className="w-full border px-3 py-2"
-//         />
-//         <input
-//           type="text"
-//           placeholder="Photo URL"
-//           {...register("image", { required: true })}
-//           className="w-full border px-3 py-2"
-//         />
-//         <input
-//           type="email"
-//           placeholder="Email"
-//           {...register("email", { required: true })}
-//           className="w-full border px-3 py-2"
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           {...register("password", { required: true, minLength: 6 })}
-//           className="w-full border px-3 py-2"
-//         />
-//         <button
-//           type="submit"
-//           className="w-full bg-green-600 text-white py-2 rounded"
-//         >
-//           Register
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Register;
-
-
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
@@ -89,7 +22,6 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    // Basic password strength validation (min 6 char)
     if (form.password.length < 6) {
       toast.error("Password must be at least 6 characters");
       return;
@@ -99,7 +31,6 @@ const Register = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password);
 
-      // Update displayName and photoURL
       await updateProfile(userCredential.user, {
         displayName: form.name,
         photoURL: form.image || "https://i.ibb.co/7QpKsCX/user.png",

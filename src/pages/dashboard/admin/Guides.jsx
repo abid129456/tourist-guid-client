@@ -11,10 +11,10 @@ const fetchGuides = async () => {
 const AdminGuides = () => {
   const queryClient = useQueryClient();
 
-  // Get guides list
+
   const { data: guides = [], isLoading, isError } = useQuery(["tour-guides"], fetchGuides);
 
-  // Delete mutation
+
   const deleteMutation = useMutation(
     (id) => axios.delete(`http://localhost:5000/tour-guides/${id}`),
     {
@@ -26,7 +26,7 @@ const AdminGuides = () => {
     }
   );
 
-  // Approve mutation
+
   const approveMutation = useMutation(
     (id) => axios.patch(`http://localhost:5000/guides/approve/${id}`),
     {

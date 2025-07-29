@@ -1,10 +1,8 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-
 const DashboardLayout = () => {
   const { user, role, logout } = useAuth();
-
   return (
     <div className="dashboard-layout flex min-h-screen">
       <aside className="w-64 bg-gray-800 text-white p-4">
@@ -23,7 +21,7 @@ const DashboardLayout = () => {
             </>
           )}
 
-          {/* Guide Links */}
+
           {role === "guide" && (
             <>
               <Link to="/dashboard/guide/requests" className="hover:underline">Requests</Link>
@@ -31,7 +29,7 @@ const DashboardLayout = () => {
             </>
           )}
 
-          {/* Admin Links */}
+
           {role === "admin" && (
             <>
               <Link to="/dashboard/admin/users" className="hover:underline">Manage Users</Link>

@@ -9,31 +9,7 @@ import TourGuidesSection from "../components/TourGuidesSection";
 const Home = () => {
     return (
         <div>
-            {/* Hero / Banner Section */}
-            {/* <section className="relative h-[80vh] bg-cover bg-center bg-[url('https://i.ibb.co/twS14HHb/giau-tran-ZMd-Xvd6j-Gww-unsplash.jpg')] flex items-center justify-center">
-                <div className="bg-black bg-opacity-60 w-full h-full absolute top-0 left-0 z-10"></div>
-                <motion.div
-                    className="text-center text-white z-20 p-4"
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                        Explore Bangladesh
-                    </h1>
-                    <p className="text-xl md:text-2xl mb-6">
-                        Discover the hidden beauty of our land
-                    </p>
-                    <Link
-                        to="/trips"
-                        className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-lg"
-                    >
-                        View Trips
-                    </Link>
-                </motion.div>
-            </section> */}
-
-            <section
+         <section
                 className="relative h-[80vh] bg-cover bg-center flex items-center justify-center"
                 style={{
                     backgroundImage: "url('https://i.ibb.co/twS14HHb/giau-tran-ZMd-Xvd6j-Gww-unsplash.jpg')",

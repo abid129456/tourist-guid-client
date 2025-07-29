@@ -5,7 +5,6 @@ const Community = () => {
       <p className="text-center text-gray-600 mb-8">
         Read real stories and experiences from fellow travelers.
       </p>
-
       <div className="grid md:grid-cols-2 gap-6">
         {/* Placeholder for stories */}
         <div className="bg-white p-4 rounded shadow">
@@ -24,5 +23,4 @@ const Community = () => {
     </div>
   );
 };
-
 export default Community;

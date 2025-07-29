@@ -1,5 +1,4 @@
 import React from "react";
-
 const AboutUs = () => {
   return (
     <div className="max-w-5xl mx-auto py-12 px-4">
@@ -12,7 +11,6 @@ const AboutUs = () => {
           I am <strong>Millat Sarker Himel</strong>, the developer behind this project. I have a passion for building web applications that create great user experiences and bring useful solutions.
         </p>
       </section>
-
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Projects I've Created</h2>
         <ul className="list-disc list-inside space-y-2">
@@ -48,5 +46,4 @@ const AboutUs = () => {
     </div>
   );
 };
-
 export default AboutUs;
